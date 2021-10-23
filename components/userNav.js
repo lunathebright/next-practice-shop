@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import styles from "../styles/UserNav.module.css";
 
 export default function UserNav() {
@@ -25,8 +26,16 @@ function BeforeSignIn() {
 function AfterSignIn() {
   return (
     <>
-      <li className={styles.userNavItem}>my account</li>
-      <li className={styles.userNavItem}>cart</li>
+      <li className={styles.userNavItem}>
+        <Link href={`/myAccount`}>
+          <a>my account</a>
+        </Link>
+      </li>
+      <li className={styles.userNavItem}>
+        <Link href={`/cart`}>
+          <a>cart</a>
+        </Link>
+      </li>
     </>
   );
 }
