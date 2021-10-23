@@ -1,3 +1,16 @@
+.shopHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 10px 0;
+}
+
 .shopTitle {
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 20px;
+  font-size: 35px;
+  font-weight: 800;
 }

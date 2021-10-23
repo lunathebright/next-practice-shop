@@ -2,9 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-import Main from "../components/main";
-import Nav from "../components/nav";
 import Header from "../components/header";
+import Main from "../components/main";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
         <title>test_shop</title>
       </Head>
       <Header />
-      <Nav />
       <Main />
     </>
   );

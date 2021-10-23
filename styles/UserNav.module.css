@@ -1,0 +1,18 @@
+.userNavBox {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.userNavItems {
+  display: flex;
+  justify-content: right;
+}
+
+.userNavItem {
+  cursor: pointer;
+}
+
+.userNavItem + .userNavItem {
+  margin-left: 10px;
+}

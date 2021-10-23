@@ -1,3 +1,11 @@
+import MainImg from "./mainImg";
+import Products from "./products";
+
 export default function Main() {
-  return <div>this is main</div>;
+  return (
+    <>
+      <MainImg />
+      <Products />
+    </>
+  );
 }
