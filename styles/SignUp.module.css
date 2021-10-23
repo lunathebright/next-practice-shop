@@ -1,0 +1,20 @@
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  background: rgb(255, 235, 235);
+}
+
+.inputTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 3px;
+  width: 230px;
+}
+
+.submitBtn {
+  margin-top: 20px;
+}

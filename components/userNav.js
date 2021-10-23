@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "../styles/UserNav.module.css";
 
 export default function UserNav() {
-  const [isValidUser, setIsVaildUser] = useState(true);
+  const [isValidUser, setIsVaildUser] = useState(false);
 
   return (
     <nav className={styles.userNavBox}>
@@ -17,8 +17,16 @@ export default function UserNav() {
 function BeforeSignIn() {
   return (
     <>
-      <li className={styles.userNavItem}>SignUp</li>
-      <li className={styles.userNavItem}>SignIn</li>
+      <li className={styles.userNavItem}>
+        <Link href={`/signUp`}>
+          <a>Sign Up</a>
+        </Link>
+      </li>
+      <li className={styles.userNavItem}>
+        <Link href={`/signIn`}>
+          <a>Sign In</a>
+        </Link>
+      </li>
     </>
   );
 }
