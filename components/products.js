@@ -1,27 +1,23 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../styles/Products.module.css";
 
-export default function Products() {
-  const [products, setProducts] = useState(null);
-
-  useEffect(() => {
-    fetch("/data/data.json")
-      .then((res) => {
-        return res.json();
-      })
-      .then((res) => {
-        setProducts(res.data);
-      });
-  }, []);
-
+export default function Products({ products }) {
   return (
     <ul className={styles.products}>
       {products &&
         products.map((product) => {
           return (
-            <Product key={`${product.brand}_${product.model}`} item={product} />
+            <Link
+              href={`/products/${product.model}`}
+              key={`${product.brand}_${product.model}`}
+              onClick={onClick}
+            >
+              <a>
+                <Product item={product} />
+              </a>
+            </Link>
           );
         })}
     </ul>
@@ -36,4 +32,8 @@ function Product({ item }) {
       <span className={styles.price}>{item.price}</span>
     </li>
   );
+}
+
+function onClick() {
+  console.log("clicked");
 }
