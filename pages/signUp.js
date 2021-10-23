@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import styles from "../styles/SignUp.module.css";
+import styles from "../styles/Signs.module.css";
 
 export default function SignUp() {
   return (
