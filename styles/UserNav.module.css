@@ -10,6 +10,10 @@
 }
 
 .userNavItem {
+  padding: 5px 5px 3px;
+  background: rgb(189, 189, 189);
+  border-radius: 3px;
+  font-size: 12px;
   cursor: pointer;
 }
 

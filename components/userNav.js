@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "../styles/UserNav.module.css";
 
 export default function UserNav() {
-  const [isValidUser, setIsVaildUser] = useState(false);
+  const [isValidUser, setIsVaildUser] = useState(true);
 
   return (
     <nav className={styles.userNavBox}>
