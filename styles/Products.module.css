@@ -1,0 +1,22 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.productItem {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 20px;
+}
+
+.productItem .name {
+  margin: 10px 0;
+}
+
+.productItem .price {
+  color: dimgray;
+  font-size: 12px;
+}

@@ -1,18 +1,18 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import Header from "../components/header";
 import Main from "../components/main";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
-    <>
+    <Layout>
       <Head>
-        <title>test_shop</title>
+        <title>the pointe</title>
       </Head>
       <Header />
       <Main />
-    </>
+    </Layout>
   );
 }
