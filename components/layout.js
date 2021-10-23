@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import styles from "../styles/Layout.module.css";
+import Header from "./header";
 
 export default function Layout({ children }) {
   return (
@@ -8,7 +9,8 @@ export default function Layout({ children }) {
       <Head>
         <title>test_shop</title>
       </Head>
-      {children}
+      <Header />
+      <section className={styles.contents}>{children}</section>
     </div>
   );
 }

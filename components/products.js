@@ -12,7 +12,6 @@ export default function Products({ products }) {
             <Link
               href={`/products/${product.model}`}
               key={`${product.brand}_${product.model}`}
-              onClick={onClick}
             >
               <a>
                 <Product item={product} />
@@ -32,8 +31,4 @@ function Product({ item }) {
       <span className={styles.price}>{item.price}</span>
     </li>
   );
-}
-
-function onClick() {
-  console.log("clicked");
 }
