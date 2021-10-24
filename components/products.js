@@ -3,6 +3,16 @@ import Link from "next/link";
 
 import styles from "../styles/Products.module.css";
 
+function Product({ product }) {
+  return (
+    <li className={styles.productItem}>
+      <Image alt={product.model} src={product.image} width="100" height="100" />
+      <span className={styles.name}>{product.model}</span>
+      <span className={styles.price}>{product.price}</span>
+    </li>
+  );
+}
+
 export default function Products({ products }) {
   return (
     <ul className={styles.products}>
@@ -10,25 +20,16 @@ export default function Products({ products }) {
         products.map((product) => {
           return (
             <Link
-              href={`/products/${product.model}`}
+              href={`/${product.brand}/${product.model}`}
+              // as={`/${product.brand}/${product.model}`}
               key={`${product.brand}_${product.model}`}
             >
               <a>
-                <Product item={product} />
+                <Product product={product} />
               </a>
             </Link>
           );
         })}
     </ul>
-  );
-}
-
-function Product({ item }) {
-  return (
-    <li className={styles.productItem}>
-      <Image alt={item.model} src={item.image} width="100" height="100" />
-      <span className={styles.name}>{item.model}</span>
-      <span className={styles.price}>{item.price}</span>
-    </li>
   );
 }

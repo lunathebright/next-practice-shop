@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Layout from "../components/layout";
-import Products from "../components/products";
+import Layout from "../../components/layout";
+import Products from "../../components/products";
 
 export default function Brand() {
   const route = useRouter();
@@ -22,7 +22,7 @@ export default function Brand() {
   return (
     <Layout>
       <ul>
-        <Products products={items} />
+        <Products products={products} />
       </ul>
     </Layout>
   );

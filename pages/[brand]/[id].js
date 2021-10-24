@@ -4,18 +4,16 @@ import Image from "next/image";
 import Layout from "../../components/layout";
 
 export default function Detail() {
-  const location = useRouter();
+  const route = useRouter();
   const [itemInfo, setItemInfo] = useState(null);
 
   useEffect(() => {
     fetch(`/data/data.json`)
       .then((res) => res.json())
       .then((res) => {
-        setItemInfo(
-          res.data.filter((item) => item.model === location.query.id)
-        );
+        setItemInfo(res.data.filter((item) => item.model === route.query.id));
       });
-  }, [location.query.id]);
+  }, [route.query.id]);
 
   return (
     <Layout>
